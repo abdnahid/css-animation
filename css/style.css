@@ -1,0 +1,261 @@
+
+.container{
+	padding-bottom:100px;
+}
+.navbar .navbar-brand img{
+	height: 50px;
+    background: #3e4b44;
+    box-shadow: 4px 5px 8px 0px #50c0b1;
+}
+.navbar .navbar-brand{}
+.navbar .navbar-nav{}
+.navbar .navbar-nav .nav-item{
+	padding: 0 15px;
+	position: relative;
+}
+.navbar .navbar-nav .nav-item:before{
+	content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+.navbar .navbar-nav .nav-item:after{
+	content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    transform: scale(0.6);
+}
+.navbar .navbar-nav .nav-item:last-child:after{
+	opacity: 0;
+}
+.navbar .navbar-nav .nav-item:hover:before{
+	transform: scale(1);
+	box-shadow: 0 0px 13px 9px #50c0b1;
+}
+
+.navbar .navbar-nav .nav-item .nav-link{
+	position: relative;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.navbar .navbar-nav .nav-item:hover .nav-link{
+    color: #000;
+}
+
+
+.container ul li i{
+    color: #36ffff;
+    font-size: 20px;
+    background-color: #020000;
+    padding: 3px;
+}
+.container ul li a{
+	text-decoration: none;
+}
+.container ul li{
+    padding: 0 10px;
+}
+.container .social-icon{
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+	padding: 10px 0;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: scale(0);
+	transition: all 0.5s ease;
+	z-index: 1000;
+}
+.container .col-8{
+	position: relative;
+	overflow: hidden;
+}
+.container .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#04ea6f+0,040044+100&1+0,0.55+100 */
+	background: -moz-linear-gradient(top,  rgba(4,234,111,0.6) 0%, rgba(4,0,68,0.3) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(4,234,111,0.6) 0%,rgba(4,0,68,0.3) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(4,234,111,0.6) 0%,rgba(4,0,68,0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04ea6f', endColorstr='#8c040044',GradientType=0 ); /* IE6-9 */
+
+
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.container .col-8:hover .overlay{
+	transform: translate(-50%, -50%) scale(1);
+	animation-name: shade;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	animation-direction: alternate;
+}
+
+.container .col-8:hover .social-icon{
+	transform: scale(1);
+}
+
+.container .col-8 img{
+
+	transition: all 0.5s ease;
+}
+
+.container .col-8:hover img{
+	transform: scale(1.2);
+}
+
+.container .col-8 h1{
+	font-size: 50px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #36ffff;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+.container .col-8:hover h1{
+	transform: translate(-50%, -50%) scale(1);
+	top: 70%;
+}
+
+.line1{
+    width: 2px;
+    height: 64%;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0,-50%);
+    opacity:0;
+    transition: all 0.5s ease;
+}
+.line2{
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    background: #fff;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    opacity:0;
+    transition: all 0.5s ease;
+}
+.line3{
+    width: 2px;
+    height: 64%;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0,-50%);
+    opacity:0;
+    transition: all 0.5s ease;
+}
+.line4{
+	position: absolute;
+    width: 80%;
+    height: 2px;
+    background: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    opacity:0;
+    transition: all 0.5s ease;
+}
+
+.col-8:hover .line1{
+	left:10%;
+	opacity: 1;
+}
+.col-8:hover .line2{
+	top:18%;
+	opacity: 1;
+}
+.col-8:hover .line3{
+	right:10%;
+	opacity: 1;
+}
+.col-8:hover .line4{
+	bottom:18%;
+	opacity: 1;
+}
+
+.col-8 .float i{
+	font-size: 40px;
+	position: absolute;
+	top:0;
+	left: 0;
+	transform: translate(-50%,-50%);
+	color:#fff;
+	z-index: 1;
+	animation-name: floating;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+}
+
+@keyframes shade{
+	0%{
+		width: 0%;
+		height: 0%;
+	}
+	100%{
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@keyframes floating{
+	0%{
+		top:0%;
+		left: 0%;
+	}
+	20%{
+		top:100%;
+		left: 25%;
+		transform: translate(-50%,-50%) rotate(90deg);
+		color:#36ffff;
+	}
+	40%{
+		top:50%;
+		left: 100%;
+		transform: translate(-50%,-50%) rotate(180deg);
+	}
+	60%{
+		top:0%;
+		left: 70%;
+		transform: translate(-50%,-50%) rotate(270deg);
+		color:#fff;
+	}
+	80%{
+		top:50%;
+		left: 0%;
+		transform: translate(-50%,-50%) rotate(360deg);
+		color:#fff;
+	}
+	100%{
+		top:100%;
+		left: 100%;
+		transform: translate(-50%,-50%) rotate(450deg);
+		color:#36ffff;
+	}
+}
